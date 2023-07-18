@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fffcf7; /* 背景色を指定 */
+  z-index: -1; /* 背景を最背面に配置 */
+}
+
+/* header作成 */
+
+.header_li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  background-color: none;
+  padding-top: 10px;
+}
+
+.drawer_hidden {
+  display: none;
+}
+
+.drawer_open {
+  display: flex;
+  height: 20px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  right: 0;
+}
+
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+.drawer_open span:after {
+  top: 8px;
+}
+
+#drawer_input:checked~.drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked~.drawer_open span:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 99;
+  background: #fff;
+  transition: 0.5s;
+  display: flex;
+}
+
+.nav_list {
+  background-color: #ffebeb;
+  list-style: none;
+  width: 100vw;
+  margin: 0;
+  display: block;
+}
+
+.nav_list li{
+  padding-bottom: 5px;
+}
+
+.nav_list li:hover{
+  background-color: aqua;
+}
+
+#drawer_input:checked ~ .nav_content {
+  left: 60%;
+}
+
+/* header作成終了 */
+
+.content {
+  max-width: 1200px; /* コンテンツの最大幅を指定 */
+  margin: 0 auto; /* コンテンツを中央に配置 */
+  padding: 40px;
+  margin-top: 15vh;
+  background-color: #fff; /* コンテンツの背景色を指定 */
+}
+
+.img1_gif {
+  /* background-color: #b37777; */
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* height: 100%;
+  width: 100%; */
+  top: 0px;
+  right: 0px;
+}
+
+.img2_gif {
+  /* background-color: #ccc; */
+  position: absolute;
+  z-index: 3;
+  bottom: -10px;
+  left: 0px;
+  transform: scaleX(-1);
+}
+
+.main {
+  padding: 0.5rem 1rem;
+  flex: 1;
+  width: 80%;
+  height: 90%;
+  background-color: #f2f2f2;
+  margin: 3rem auto;
+  display: block;
+}
+h1 {
+  font-family: serif;
+  font-weight: bold;
+  font-style: oblique;
+  color: hsl(0, 0%, 6%);
+  background-color: rgb(198, 198, 198);
+}
+
+p.warning {
+  color: blue;
+}
+
+p.warning.severe {
+  font-size: 100%;
+}

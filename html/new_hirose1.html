@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hirose_page</title>
+  <link rel="stylesheet" href="../css/new_hirose1.css">
+</head>
+<body>
+  <div class="container">
+    <div class="background">
+      <div class="img1_gif"><img src="../img/gif8.gif" alt=""></div>
+      <div class="img2_gif"><img src="../img/gif11.webp" alt=""></div>
+      <div class="img3_gif"><img src="../img/gif19.gif" alt=""></div>
+    </div>
+    <header class="header_li">
+      <div class="nav">
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="../html/new_hirose2.html">自然言語とは</a></li>
+            <li class="nav_item"><a href="../html/new_hirose1.html">自然言語処理の仕組み</a></li>
+            <li class="nav_item"><a href="../html/new_sengoku1.html">形態素解析とは</a></li>
+            <li class="nav_item"><a href="../html/new_yokota1.html">コーパスとは</a></li>
+            <li class="nav_item"><a href="../html/test_login.html">TOP画面</a></li>
+            <li class="nav_item"><a href="../html/login.html">メンバー</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main">
+      <h1>
+        自然言語処理の仕組み
+      </h1>
+      <p>処理対象となる文章群（コーパスといいます）と、単語を識別するための辞書が必要となる。</p>
+      <p>
+        現在では、インターネットを経由して、日々大量の言葉がやりとりされ、多くの新しい単語が生まれている。​
+        自然言語処理は、
+      <p class="warning severe">「形態素解析→構文解析→意味解析→文脈解析」</p>の順で行われる。</p>
+      <div style="border: 2px solid rgb(6, 6, 6)">
+        <ol>
+          <p>・形態素解析：各フレーズの構造情報を表す</p>
+          <p>・構文解析  ：各フレーズのの関係を確認してつなぎ合わせる</p>
+          <p>・意味解析  ：ひとかたまりのフレーズ群が全体のどこにいるのか確認する</p>
+          <p>・文脈解析  ：最終調整を行う</p>
+        </ol>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

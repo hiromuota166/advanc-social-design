@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sengoku_page</title>
+    <link rel="stylesheet" href="../css/new_sengoku1.css">
+  </head>
+<body>
+  <div class="container">
+    <div class="background">
+      <div class="img1_gif"><img src="../img/gif28.gif" alt=""></div>
+      <div class="img2_gif"><img src="../img/gif3.webp" alt=""></div>
+    </div>
+  </div>
+
+  <header class="header_li">
+    <div class="nav">
+      <input id="drawer_input" class="drawer_hidden" type="checkbox">
+      <label for="drawer_input" class="drawer_open"><span></span></label>
+      <nav class="nav_content">
+        <ul class="nav_list">
+          <li class="nav_item"><a href="../html/new_hirose2.html">自然言語とは</a></li>
+          <li class="nav_item"><a href="../html/new_hirose1.html">自然言語処理の仕組み</a></li>
+          <li class="nav_item"><a href="../html/new_sengoku1.html">形態素解析とは</a></li>
+          <li class="nav_item"><a href="../html/new_yokota1.html">コーパスとは</a></li>
+          <li class="nav_item"><a href="../html/test_login.html">TOP画面</a></li>
+          <li class="nav_item"><a href="../html/login.html">メンバー</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="main">
+    <div class="main_intr">
+      <div class="intr_header">
+        <h1>形態素解析とは</h1>
+        <div class="pc">
+          <img src="../img/pc.jpeg" alt="">
+        </div>
+      </div>
+      <div class="intr1">
+        <h2>＃何をするか</h2>
+        <div>
+          <p class="do">
+            ⽂字の並び（である⽂）を形態素あるいは語に分割する<br>
+            ・形態素の定義はいまひとつ⼀貫していない。辞書によって変わる<br>
+            語（や形態素）の品詞，活⽤形，基本形を明らかにする
+          </p>
+        </div>
+      </div>
+      <div class="intr2">
+        <h2>＃何に使われるか</h2>
+        <div>
+          <p class="use">
+            句構造解析，意味解析と続く⾃然⾔語理解の⼊り⼝<br>
+            情報検索におけるキーワード抽出<br>
+            仮名漢字変換はひらがなを対象とした形態素解析
+          </p>
+        </div>
+      </div>
+      <div class="intr3">
+        <h2>＃何が難しいか</h2>
+        <div>
+          <p class="difficult">
+            ⽇本語語の境界が明らかでない<br>
+            ・「畜産物価格安定法」<br>
+            英語多品詞語が⾮常に多い<br>
+            ・「time」
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="main_processed">
+      <div class="processed_header">
+        <h1>形態素解析の処理</h1>
+      </div>
+      <div class="processed1">
+        <h2>☟制約処理（制約適用）</h2>
+      </div>
+      <div class="keitaiso">
+        <img src="../img/keitaiso.png" width="1200px" height="500px">
+      </div>
+      <div class="processed2">
+        <h2>☟選好処理（選好適用）</h2>
+        <p>
+          文頭/たべもの/が/体質/に/あっ/た/文末
+        </p>
+      </div>
+    </div>
+    <div>
+      <h1>句構造解析</h1>
+      <h2>＃何をするか</h2>
+      <p>・句構造は隣接する語の間の関係に基づいて文の構造を表現したもので、語および文法的カテゴリ（非終端記号）を節点とするツリーで表現される。​</p>
+      <p>・文のどこからどこまでが部分構造をなすのかを推測する解析方法である。</p>
+      <img src="../img/gazou1.png" width="800px" height="400px">
+    </div>
+    <div>
+      <h1>依存構造解析</h1>
+      <h2>＃何をするか</h2>
+      <p>・依存構造は語や文節間の修飾↔被修飾関係、係り受け関係といった依存関係に基づいて文章内の構造を表現したものであり、単語や文節を接点とするツリーで表現されます。</p>
+      <p>・依存構造解析とは、文章内にある単語間の係り受け関係を調べ、どの単語がどの単語に係るのかを構文的に解析したものです。</p>
+      <h2>＃活用事例</h2>
+      <p>・日本語の構文的依存構造関係を出力してくれる構文解析器(parser)は、主にCaboChaやKNPなどがあります。</p>
+      <img src="../img/gazou2.png" width="600px" height="300px">
+    </div>
+  </div>
+</body>
+</html>

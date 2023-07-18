@@ -1,0 +1,221 @@
+/* CSS の例:自由に修正してください */
+* {
+  padding: 0;
+  margin: 0;
+}
+/* box-sizingをborder-boxとする */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* bodyのmarginを0にし，ウィンドウ全面に広げる */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #efebeb; */
+  background-color: #4e3636;
+}
+
+.background {
+  /* background-image: ; */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  /* flexboxを使って縦方向に並べる */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ヘッダーのスタイル例 */
+.header {
+  /* padding: 0.5rem 1rem; */
+  background-color: #303030;
+  text-align: center;
+  /* position: ; */
+}
+
+.header a {
+  color: #fff;
+  font-style: bold;
+  font-size: 400%;
+  font-family: 'Tilt Prism', cursive;
+  text-decoration: none;
+}
+
+.header_member ul{
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  list-style: none;
+  font-size: 200%;
+  gap: 10%;
+}
+
+.member {
+  font-family: 'Tilt Prism', cursive;
+}
+
+.footer {
+  padding: 0.5rem 1rem;
+  font-size: 80%;
+  background-color: hsl(0, 100%, 95%);
+}
+/* ----------header_li---------- */
+
+.header_li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.drawer_hidden {
+  display: none;
+}
+
+.drawer_open {
+  display: flex;
+  height: 20px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+.drawer_open span:after {
+  top: 8px;
+}
+
+#drawer_input:checked~.drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked~.drawer_open span:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 99;
+  background: #fff;
+  transition: 0.5s;
+  display: flex;
+}
+
+.nav_list {
+  background-color: #ffebeb;
+  list-style: none;
+  width: 100vw;
+}
+
+.nav_list li{
+  padding-bottom: 5px;
+}
+
+.nav_list li:hover{
+  background-color: aqua;
+}
+
+#drawer_input:checked ~ .nav_content {
+  left: 60%;
+}
+/* ----------main----------- */
+
+.main {
+  padding: 0.5rem 1rem;
+  flex: 1;
+  width: 80%;
+  height: 90%;
+  background-color: #f2f2f2;
+  margin: 3rem auto;
+  display: block;
+}
+h1{
+  font-size: 18px;
+  height: 10%;
+  padding-top: 10px;
+}
+.main li,
+.what li,
+.role li,
+.type_corpus li,
+.type li {
+  font-size:16px;
+}
+.sentence{
+  font-size: 14px;
+}
+div.what {
+  margin-bottom: 5px;
+  height: 25%;
+}
+div.what li{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+div.role{
+  height: 25%;
+}
+div.role li{
+  margin-bottom:8px;
+}
+div.type_corpus{
+  height: 40%;
+}
+ul.corpus{
+  margin-left: 20px;
+  height: 90%;
+  margin-bottom: 0;
+}
+ol li{
+  margin-top: 25px;
+}
+ol p{
+  font-size: 11px;
+  float: right;
+}
